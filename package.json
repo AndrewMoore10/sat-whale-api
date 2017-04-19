@@ -1,0 +1,79 @@
+{
+  "name": "sat-whale-api",
+  "version": "0.1.0",
+  "description": "API for Signal Aquisition and Telemetry system",
+  "keywords": [
+    "jsonapi",
+    "json:api",
+    "swagger",
+    "api",
+    "satellite",
+    "broadcasting"
+  ],
+  "main": "lib/jsonApi.js",
+  "author": "Andrew Moore",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moeabm/sat-whale-api"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "express-graphql": "^0.5.4",
+    "graphql": "^0.7.0",
+    "istanbul": "^0.4.5",
+    "joi": "^9.0.4",
+    "lodash.assign": "^4.0.9",
+    "lodash.isequal": "^4.2.0",
+    "lodash.omit": "^4.3.0",
+    "lodash.pick": "^4.2.1",
+    "lodash.uniq": "^4.3.0",
+    "lodash.uniqby": "^4.5.0",
+    "node-uuid": "^1.4.7",
+    "qs": "^6.2.0",
+    "request": "^2.72.0",
+    "use-strict": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.6.1",
+    "eslint-config-standard": "^6.1.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.0",
+    "jscpd": "^0.6.1",
+    "lokka": "^1.7.0",
+    "lokka-transport-http": "^1.4.0",
+    "mocha": "^3.1.0",
+    "mocha-performance": "^0.1.1",
+    "node-inspector": "^0.12.8",
+    "plato": "^1.7.0",
+    "swagger-tools": "^0.10.1",
+    "v8-profiler": "^5.6.5"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --require use-strict -S -R spec ./test/*.js",
+    "start": "node example/server.js",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
+    "complexity": "node ./node_modules/plato/bin/plato -r -d complexity lib",
+    "performance": "node --allow-natives-syntax --harmony ./node_modules/mocha/bin/_mocha -S --reporter mocha-performance ./test/*.js",
+    "lint": "node ./node_modules/eslint/bin/eslint ./example ./lib ./test --quiet && echo '✔ All good!'",
+    "jscpd": "jscpd --blame -p ./lib/ || echo 'Finished!'",
+    "swagger": "node ./node_modules/mocha/bin/mocha --require use-strict -S -R spec ./swaggerValidator.js --timeout 60000"
+  },
+  "config": {
+    "blanket": {
+      "pattern": ".js",
+      "data-cover-never": [
+        "node_modules",
+        "test",
+        "example"
+      ]
+    }
+  }
+}
