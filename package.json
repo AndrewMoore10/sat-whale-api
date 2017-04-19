@@ -10,7 +10,7 @@
     "satellite",
     "broadcasting"
   ],
-  "main": "lib/jsonApi.js",
+  "main": "server.js",
   "author": "Andrew Moore",
   "license": "MIT",
   "repository": {
@@ -21,21 +21,8 @@
     "node": "*"
   },
   "dependencies": {
-    "async": "^2.0.1",
-    "body-parser": "^1.15.1",
-    "cookie-parser": "^1.4.3",
-    "debug": "^2.2.0",
-    "express": "^4.13.4",
-    "express-graphql": "^0.5.4",
-    "graphql": "^0.7.0",
-    "istanbul": "^0.4.5",
-    "joi": "^9.0.4",
-    "lodash.assign": "^4.0.9",
-    "lodash.isequal": "^4.2.0",
-    "lodash.omit": "^4.3.0",
-    "lodash.pick": "^4.2.1",
-    "lodash.uniq": "^4.3.0",
-    "lodash.uniqby": "^4.5.0",
+    "jsonapi-server": "^2.3.2",
+    "lodash": "^4.0.9",
     "node-uuid": "^1.4.7",
     "qs": "^6.2.0",
     "request": "^2.72.0",
@@ -58,11 +45,11 @@
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha --require use-strict -S -R spec ./test/*.js",
-    "start": "node example/server.js",
+    "start": "node ./server.js",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
     "complexity": "node ./node_modules/plato/bin/plato -r -d complexity lib",
     "performance": "node --allow-natives-syntax --harmony ./node_modules/mocha/bin/_mocha -S --reporter mocha-performance ./test/*.js",
-    "lint": "node ./node_modules/eslint/bin/eslint ./example ./lib ./test --quiet && echo '✔ All good!'",
+    "lint": "node ./node_modules/eslint/bin/eslint ./handlers ./resources ./lib ./test --quiet && echo '✔ All good!'",
     "jscpd": "jscpd --blame -p ./lib/ || echo 'Finished!'",
     "swagger": "node ./node_modules/mocha/bin/mocha --require use-strict -S -R spec ./swaggerValidator.js --timeout 60000"
   },
