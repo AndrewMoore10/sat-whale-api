@@ -1,4 +1,5 @@
-const jsonApi = require('../../.')
+const jsonApi = require('jsonapi-server')
+
 const photoHandler = require('../handlers/photoHandler.js')
 
 jsonApi.define({

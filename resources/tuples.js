@@ -1,4 +1,5 @@
-const jsonApi = require('../../.')
+const jsonApi = require('jsonapi-server')
+
 const tupleHandler = require('../handlers/tupleHandler.js')
 
 jsonApi.define({

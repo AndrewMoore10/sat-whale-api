@@ -1,4 +1,5 @@
-const jsonApi = require('../../.')
+const jsonApi = require('jsonapi-server')
+
 const tagHandler = require('../handlers/tagHandler.js')
 
 jsonApi.define({

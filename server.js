@@ -13,8 +13,8 @@ jsonApi.setConfig({
     description: 'This is the API description block that shows up in the swagger.json',
     contact: {
       name: 'API Contact',
-      email: 'apicontact@holidayextras.com',
-      url: 'docs.hapi.holidayextras.com'
+      email: 'andrew.moore@10news.com',
+      url: 'www.10news.com'
     },
     license: {
       name: 'MIT',

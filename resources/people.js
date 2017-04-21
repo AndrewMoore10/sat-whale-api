@@ -1,4 +1,5 @@
-const jsonApi = require('../../.')
+const jsonApi = require('jsonapi-server')
+
 const peopleHandler = require('../handlers/peopleHandler.js')
 
 jsonApi.define({

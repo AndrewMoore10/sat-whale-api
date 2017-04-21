@@ -1,4 +1,4 @@
-const jsonApi = require('../../.')
+const jsonApi = require('jsonapi-server')
 const articleHandler = require('../handlers/articleHandler.js')
 const timestampHandler = require('../handlers/timestampHandler.js')
 const authenticationHandler = require('../handlers/authenticationHandler.js')

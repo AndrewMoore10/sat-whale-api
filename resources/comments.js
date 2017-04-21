@@ -1,4 +1,4 @@
-const jsonApi = require('../../.')
+const jsonApi = require('jsonapi-server')
 const commentHandler = require('../handlers/commentHandler.js')
 
 jsonApi.define({
